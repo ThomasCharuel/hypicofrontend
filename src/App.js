@@ -17,7 +17,7 @@ const App = () => (
           <div className="container nav-wrapper">
             <Link to='/' className="brand-logo center">Hypico</Link>
             <ul id="nav-mobile" className="left hide-on-med-and-down">
-              <li><Link to='/'><i class="material-icons">home</i></Link></li>
+              <li><Link to='/'><i className="material-icons">home</i></Link></li>
             </ul>
           </div>
         </nav>

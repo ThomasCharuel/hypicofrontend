@@ -3,11 +3,7 @@ import {
   Link
 } from 'react-router-dom'
 
-const startups = [
-  "startup A",
-  "startup B",
-  "startup C"
-]
+var startups = require('./startups.json');
 
 const Home = () => (
   <div className="row">
@@ -15,7 +11,7 @@ const Home = () => (
       <li className="collection-header"><h2>Current ICOs</h2></li>
       {startups.map( (el, i) => 
         <li className="collection-item" key={i}>
-          <div><Link to={`/${el}`}>{el}</Link><Link to={`/${el}`} className="secondary-content"><i className="material-icons">send</i></Link></div>
+          <div><Link to={`/${el.id}`}>{el.id}</Link><Link to={`/${el.id}`} className="secondary-content"><i className="material-icons">send</i></Link></div>
         </li>
       )}
     </ul>
