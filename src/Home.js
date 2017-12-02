@@ -1,7 +1,5 @@
 import React from 'react'
 import {
-  BrowserRouter as Router,
-  Route,
   Link
 } from 'react-router-dom'
 
@@ -12,10 +10,14 @@ const startups = [
 ]
 
 const Home = () => (
-  <div>
-    <h2>Startups doing an ICO</h2>
-    <ul>
-      {startups.map( (el, i) => <li key={i}><Link to={`/${el}`}>{el}</Link></li>)}
+  <div className="row">
+    <ul className="collection with-header">
+      <li className="collection-header"><h2>Current ICOs</h2></li>
+      {startups.map( (el, i) => 
+        <li className="collection-item" key={i}>
+          <div><Link to={`/${el}`}>{el}</Link><Link to={`/${el}`} className="secondary-content"><i className="material-icons">send</i></Link></div>
+        </li>
+      )}
     </ul>
   </div>
 )
