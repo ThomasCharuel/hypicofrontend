@@ -3,17 +3,20 @@
     "id": "Debitum Network",
     "description": "Borderless small business financing.",
     "white_paper": "https://debitum.network/assets/files/Debitum-White-Paper.pdf",
+    "github": "https://github.com/debitum",
     "indicator": 0.8
   },
   {
     "id": "Vyral",
     "description": "The power of viral marketing",
     "white_paper": "https://vyral.network/whitepaper/VyralWhitepaper.pdf",
+    "github": "https://github.com/vyralnetwork/vyral",
     "indicator": 0.9
   },{
     "id": "Spectivvr",
     "description": "The Signal Token (SIG) Protocol is designed to decentralize the buying, selling, and rewarding of attention across media platforms by removing centralized intermediaries from advertising transactions.",
     "white_paper": "https://drive.google.com/file/d/1-Y4-Bb9-70DhdVeTvYLZtkK5W3Lvruc-/view",
+    "github": "https://github.com/spectivofficial",
     "indicator": 0.7
   }
 ]
