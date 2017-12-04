@@ -2,6 +2,7 @@ import React from 'react'
 import moment from 'moment'
 import Chart from 'chart.js'
 
+ 
 function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
@@ -9,8 +10,6 @@ function randomNumber(min, max) {
 function randomBar(date, lastClose) {
   var open = randomNumber(lastClose * .95, lastClose * 1.05);
   var close = randomNumber(open * .95, open * 1.05);
-  var high = randomNumber(Math.max(open, close), Math.max(open, close) * 1.1);
-  var low = randomNumber(Math.min(open, close) * .9, Math.min(open, close));
   return {
     t: date.valueOf(),
     y: close
@@ -29,7 +28,7 @@ export default class lineChart extends React.Component{
 
   setChart(){
     var dateFormat = 'MMMM DD YYYY';
-		var date = moment('April 01 2017', dateFormat);
+		var date = moment('September 10 2017', dateFormat);
 		var data = [randomBar(date, 30)];
 		var labels = [date];
 		while (data.length < 60) {
@@ -39,6 +38,7 @@ export default class lineChart extends React.Component{
 				labels.push(date);
 			}
 		}
+		data = this.props.data;
 
 		var ctx = document.getElementById("chart1").getContext("2d");
 		ctx.canvas.width = 1000;

@@ -7,7 +7,7 @@ import './Home.css';
 var startups = require('./startups.json');
 
 const Home = () => (
-  <div className="row">
+  <div className="homeWrapper row">
     <ul className="collection with-header">
       <li className="collection-header"><h2>Current ICOs</h2></li>
       {startups.map( (el, i) => 
